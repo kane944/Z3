@@ -9,6 +9,11 @@
       Title="PageAuthotization">
 
     <Grid>
-        
+        <StackPanel>
+            <TextBlock>Login</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock>Password</TextBlock>
+            <TextBox></TextBox>
+        </StackPanel>
     </Grid>
 </Page>
