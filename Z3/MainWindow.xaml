@@ -7,9 +7,38 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Image Source="Resources/beauty_logo.png"
+                   Margin="5"></Image>
+            <StackPanel>
+                <TextBlock VerticalAlignment="Center" FontSize="20" >Салон красоты </TextBlock>
+                <TextBlock VerticalAlignment="Center" FontSize="40" >Мордочка</TextBlock>
+            </StackPanel>
+            
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"
+               ContentRendered="MainFrame_ContentRendered"></Frame>
+
+        <Button x:Name="BtnBack" Click="BtnBack_Click"
+                    HorizontalAlignment="Right"
+                    Width="150"
+                    Height="60"
+                    FontSize="25"
+                    Margin="5">Назад</Button>
+        
+        
+        <StackPanel Grid.Row="1">
+                
+        </StackPanel>
+        
+        
     </Grid>
+    
+    
 </Window>
