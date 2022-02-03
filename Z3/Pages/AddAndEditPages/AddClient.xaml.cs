@@ -13,25 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Z3.Pages
+namespace Z3.Pages.AddAndEditPages
 {
     /// <summary>
-    /// Логика взаимодействия для PageAuthotization.xaml
+    /// Логика взаимодействия для AddClient.xaml
     /// </summary>
-    public partial class PageAuthotization : Page
+    public partial class AddClient : Page
     {
-        public PageAuthotization()
+        public AddClient()
         {
             InitializeComponent();
-        }
-
-        private void BtnAuth_Click(object sender, RoutedEventArgs e)
-        {
-            string Pass = "1";
-            if (PasswordBox.Text == Pass)
-            {
-                Manager.MainFrame.Navigate(new AdminTables());
-            }
         }
     }
 }

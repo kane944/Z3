@@ -10,28 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Z3.Pages
+namespace Z3
 {
     /// <summary>
-    /// Логика взаимодействия для PageAuthotization.xaml
+    /// Логика взаимодействия для AddEdit.xaml
     /// </summary>
-    public partial class PageAuthotization : Page
+    public partial class AddEdit : Window
     {
-        public PageAuthotization()
+        public AddEdit()
         {
             InitializeComponent();
         }
 
-        private void BtnAuth_Click(object sender, RoutedEventArgs e)
+        private void AddEditFrame_ContentRendered(object sender, EventArgs e)
         {
-            string Pass = "1";
-            if (PasswordBox.Text == Pass)
-            {
-                Manager.MainFrame.Navigate(new AdminTables());
-            }
+
         }
     }
 }

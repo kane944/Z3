@@ -27,12 +27,12 @@ namespace Z3.Pages
 
         private void BtnVisitor_Click(object sender, RoutedEventArgs e)
         {
-
+            //Manager.MainFrame.Navigate(new AdminTables());
         }
 
         private void BtnAdmin_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new PageAuthotization());
         }
     }
 }
