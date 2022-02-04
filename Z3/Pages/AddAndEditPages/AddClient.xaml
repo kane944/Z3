@@ -5,10 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Z3.Pages.AddAndEditPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="400"
       Title="AddClient">
 
     <Grid>
+        <StackPanel Width="300">
+            <TextBlock>Имя</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock>Фамилия</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock>Отчество</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock>День рождения</TextBlock>
+            <DatePicker></DatePicker>
+            <TextBlock>День регистрации</TextBlock>
+            <DatePicker></DatePicker>
+            <TextBlock>Почта</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock>Телефон</TextBlock>
+            <TextBox></TextBox>
+            <TextBlock>Пол</TextBlock>
+            <ComboBox  x:Name="Cmb" DisplayMemberPath="Name" SelectedItem="{Binding Gender}"></ComboBox>
+            <TextBlock>Картинка</TextBlock>
+            <Button x:Name="BtnOpenFile" Height="40" Width="150" Click="BtnOpenFile_Click">Добавить изображение</Button>
+            <Button x:Name="BtnAddClient" Click="BtnAddClient_Click" Margin="50" Height="60" Width="100">Сохранить</Button>
+        </StackPanel>
         
     </Grid>
 </Page>

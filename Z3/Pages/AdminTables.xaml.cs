@@ -67,5 +67,11 @@ namespace Z3.Pages
                     break;
             }
         }
+
+        private void AddDataBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var Add = new AddEdit(context, new Client());
+            Add.Show(); 
+        }
     }
 }

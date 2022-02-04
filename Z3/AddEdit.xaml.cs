@@ -10,7 +10,14 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Z3.Pages.AddAndEditPages;
+using Z3.Pages;
+
+
+
+
 
 namespace Z3
 {
@@ -19,12 +26,20 @@ namespace Z3
     /// </summary>
     public partial class AddEdit : Window
     {
-        public AddEdit()
+        
+        public AddEdit(MordochkaEntities context, Client client)
         {
             InitializeComponent();
+            AddEditManager.AddEditFrame = AddEditFrame;
+            AddEditFrame.Navigate (new AddClient(context, client));
         }
 
         private void AddEditFrame_ContentRendered(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComBoxChooseAdd_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

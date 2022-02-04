@@ -33,9 +33,7 @@
                     Margin="5">Назад</Button>
         
         
-        <StackPanel Grid.Row="1">
-                
-        </StackPanel>
+        
         
         
     </Grid>

@@ -21,7 +21,7 @@
             <TextBlock>Service</TextBlock>
         </ComboBox>
         
-        <Button x:Name="AddDataBtn" HorizontalAlignment="Right" Style="{StaticResource BtnMenu}">Добавить запись</Button>
+        <Button x:Name="AddDataBtn" Click="AddDataBtn_Click" HorizontalAlignment="Right" Style="{StaticResource BtnMenu}">Добавить запись</Button>
 
 
         <DataGrid Grid.Row="1" x:Name="DGService" AutoGenerateColumns="False">

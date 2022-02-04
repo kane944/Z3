@@ -20,9 +20,23 @@ namespace Z3.Pages.AddAndEditPages
     /// </summary>
     public partial class AddClient : Page
     {
-        public AddClient()
+        MordochkaEntities context;
+        public AddClient(MordochkaEntities context, Client client)
         {
             InitializeComponent();
+            Cmb.ItemsSource = context.Gender.ToList();
+            this.context = context;
+            this.DataContext = client;
+        }
+
+        private void BtnAddClient_Click(object sender, RoutedEventArgs e)
+        {
+            context.SaveChanges();
+        }
+
+        private void BtnOpenFile_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
