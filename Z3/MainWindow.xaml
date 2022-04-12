@@ -13,11 +13,11 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal">
-            <Image Source="Resources/beauty_logo.png"
+            <Image Source="Resources/logo.jpg"
                    Margin="5"></Image>
             <StackPanel>
-                <TextBlock VerticalAlignment="Center" FontSize="20" >Салон красоты </TextBlock>
-                <TextBlock VerticalAlignment="Center" FontSize="40" >Мордочка</TextBlock>
+                <TextBlock VerticalAlignment="Center" FontSize="20" >Приложение контроля посадок и сбора урожая</TextBlock>
+                <TextBlock VerticalAlignment="Center" FontSize="40" >Кругло годичной теплицы</TextBlock>
             </StackPanel>
             
         </StackPanel>

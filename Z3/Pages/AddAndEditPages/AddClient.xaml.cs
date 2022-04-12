@@ -20,18 +20,20 @@ namespace Z3.Pages.AddAndEditPages
     /// </summary>
     public partial class AddClient : Page
     {
-        MordochkaEntities context;
-        public AddClient(MordochkaEntities context, Client client)
+        private Vegatables currentVegatable = new Vegatables();
+        private Vegatables Client { get; set; }
+
+        public AddClient(Vegatables vegatables)
         {
             InitializeComponent();
-            Cmb.ItemsSource = context.Gender.ToList();
-            this.context = context;
-            this.DataContext = client;
+            Vegatables = vegatables;
+            DataContext = currentVegatable;
         }
 
         private void BtnAddClient_Click(object sender, RoutedEventArgs e)
         {
-            context.SaveChanges();
+            currentVegatable.ID = PP042022Entities.GetContext().Vegatables.ToArray()[PP042022Entities.GetContext().Vegatables.ToArray().Length - 1].ID + 1;
+            PP042022Entities.GetContext().Vegatables.Add(currentVegatable);
         }
 
         private void BtnOpenFile_Click(object sender, RoutedEventArgs e)

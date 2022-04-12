@@ -14,12 +14,14 @@
                 <RowDefinition Height="195"></RowDefinition>
             </Grid.RowDefinitions>
         <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="BtnVisitor"
-                Click="BtnVisitor_Click"
-                Style="{StaticResource BtnMenu}">Visitor</Button>
-            <Button x:Name="BtnAdmin"
-                    Click="BtnAdmin_Click"
-                    Style="{StaticResource BtnMenu}">Admin</Button>
+            <Button x:Name="BtnPnating"
+                Click="BtnPnating_Click"
+                Width="250"
+                Style="{StaticResource BtnMenu}">Просмотр засадок</Button>
+            <Button x:Name="BtnWorkers"
+                    Click="BtnWorkers_Click"
+                    Width="250"
+                    Style="{StaticResource BtnMenu}">Просмотр рабочих</Button>
             </StackPanel>
         </Grid>
 </Page>

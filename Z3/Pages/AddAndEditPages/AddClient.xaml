@@ -25,7 +25,7 @@
             <TextBlock>Телефон</TextBlock>
             <TextBox></TextBox>
             <TextBlock>Пол</TextBlock>
-            <ComboBox  x:Name="Cmb" DisplayMemberPath="Name" SelectedItem="{Binding Gender}"></ComboBox>
+            <ComboBox  x:Name="CmbGender" DisplayMemberPath="Name" SelectedItem="{Binding Gender}"></ComboBox>
             <TextBlock>Картинка</TextBlock>
             <Button x:Name="BtnOpenFile" Height="40" Width="150" Click="BtnOpenFile_Click">Добавить изображение</Button>
             <Button x:Name="BtnAddClient" Click="BtnAddClient_Click" Margin="50" Height="60" Width="100">Сохранить</Button>

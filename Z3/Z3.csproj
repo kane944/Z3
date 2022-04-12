@@ -67,30 +67,31 @@
     <Compile Include="AddEdit.xaml.cs">
       <DependentUpon>AddEdit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Client.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClientService.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DocumentByService.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Gender.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="AddEditManager.cs" />
-    <Compile Include="Manager.cs" />
-    <Compile Include="Manufacturer.cs">
+    <Compile Include="GHPlantingWorker.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GreenhousePlanting.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Greenhouses.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AddAndEditPages\AddAndEditProduct.xaml.cs">
-      <DependentUpon>AddAndEditProduct.xaml</DependentUpon>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddAndEditPages\AddClient.xaml.cs">
       <DependentUpon>AddClient.xaml</DependentUpon>
@@ -104,22 +105,13 @@
     <Compile Include="Pages\PageMain.xaml.cs">
       <DependentUpon>PageMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
+    <Compile Include="TypesGH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProductPhoto.cs">
+    <Compile Include="Vegatables.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProductSale.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Service.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServicePhoto.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tag.cs">
+    <Compile Include="Workers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Page Include="AddEdit.xaml">
@@ -138,10 +130,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\AddAndEditPages\AddAndEditProduct.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\AddAndEditPages\AddClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,16 +148,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -204,20 +182,122 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\logo.jpg" />
+    <Resource Include="Resources\ClientsPhotos\1.jpg" />
+    <Resource Include="Resources\ClientsPhotos\10.jpg" />
+    <Resource Include="Resources\ClientsPhotos\11.jpg" />
+    <Resource Include="Resources\ClientsPhotos\12.jpg" />
+    <Resource Include="Resources\ClientsPhotos\13.jpg" />
+    <Resource Include="Resources\ClientsPhotos\14.jpg" />
+    <Resource Include="Resources\ClientsPhotos\15.jpg" />
+    <Resource Include="Resources\ClientsPhotos\16.jpg" />
+    <Resource Include="Resources\ClientsPhotos\17.jpg" />
+    <Resource Include="Resources\ClientsPhotos\18.jpg" />
+    <Resource Include="Resources\ClientsPhotos\19.jpg" />
+    <Resource Include="Resources\ClientsPhotos\2.jpg" />
+    <Resource Include="Resources\ClientsPhotos\20.jpg" />
+    <Resource Include="Resources\ClientsPhotos\21.jpg" />
+    <Resource Include="Resources\ClientsPhotos\22.jpg" />
+    <Resource Include="Resources\ClientsPhotos\23.jpg" />
+    <Resource Include="Resources\ClientsPhotos\24.jpg" />
+    <Resource Include="Resources\ClientsPhotos\25.jpg" />
+    <Resource Include="Resources\ClientsPhotos\26.jpg" />
+    <Resource Include="Resources\ClientsPhotos\27.jpg" />
+    <Resource Include="Resources\ClientsPhotos\28.jpg" />
+    <Resource Include="Resources\ClientsPhotos\29.jpg" />
+    <Resource Include="Resources\ClientsPhotos\3.jpg" />
+    <Resource Include="Resources\ClientsPhotos\30.jpg" />
+    <Resource Include="Resources\ClientsPhotos\31.jpg" />
+    <Resource Include="Resources\ClientsPhotos\32.jpg" />
+    <Resource Include="Resources\ClientsPhotos\33.jpg" />
+    <Resource Include="Resources\ClientsPhotos\34.jpg" />
+    <Resource Include="Resources\ClientsPhotos\35.jpg" />
+    <Resource Include="Resources\ClientsPhotos\36.jpg" />
+    <Resource Include="Resources\ClientsPhotos\37.jpg" />
+    <Resource Include="Resources\ClientsPhotos\38.jpg" />
+    <Resource Include="Resources\ClientsPhotos\39.jpg" />
+    <Resource Include="Resources\ClientsPhotos\4.jpg" />
+    <Resource Include="Resources\ClientsPhotos\40.jpg" />
+    <Resource Include="Resources\ClientsPhotos\41.jpg" />
+    <Resource Include="Resources\ClientsPhotos\42.jpg" />
+    <Resource Include="Resources\ClientsPhotos\43.jpg" />
+    <Resource Include="Resources\ClientsPhotos\44.jpg" />
+    <Resource Include="Resources\ClientsPhotos\47.jpg" />
+    <Resource Include="Resources\ClientsPhotos\48.jpg" />
+    <Resource Include="Resources\ClientsPhotos\5.jpg" />
+    <Resource Include="Resources\ClientsPhotos\6.jpg" />
+    <Resource Include="Resources\ClientsPhotos\7.jpg" />
+    <Resource Include="Resources\ClientsPhotos\8.jpg" />
+    <Resource Include="Resources\ClientsPhotos\9.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m1.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m10.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m11.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m12.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m13.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m14.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m15.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m16.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m17.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m18.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m19.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m2.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m20.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m21.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m22.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m23.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m24.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m25.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m26.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m27.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m28.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m29.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m3.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m30.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m31.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m32.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m33.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m34.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m35.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m36.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m37.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m38.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m39.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m4.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m40.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m41.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m42.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m43.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m44.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m45.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m46.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m47.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m48.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m49.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m5.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m50.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m6.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m7.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m8.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m9.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m96.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m97.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m98.jpg" />
+    <Resource Include="Resources\ClientsPhotos\m99.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resources\beauty_logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

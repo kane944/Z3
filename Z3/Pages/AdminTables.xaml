@@ -16,65 +16,38 @@
 
 
         <ComboBox x:Name="ComBoxTables" Grid.Row="0" Width="350" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" SelectionChanged="ComboBox_SelectionChanged">
-            <TextBlock>Client</TextBlock>
-            <TextBlock>Product</TextBlock>
-            <TextBlock>Service</TextBlock>
+            <TextBlock>Растения</TextBlock>
+            <TextBlock>Теплицы</TextBlock>
+            <TextBlock>Засадка в теплицы</TextBlock>
         </ComboBox>
         
         <Button x:Name="AddDataBtn" Click="AddDataBtn_Click" HorizontalAlignment="Right" Style="{StaticResource BtnMenu}">Добавить запись</Button>
 
 
-        <DataGrid Grid.Row="1" x:Name="DGService" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" x:Name="DGVegetable" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Title" Binding="{Binding Title}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Cost" Binding="{Binding Cost}"></DataGridTextColumn>
-                <DataGridTextColumn Header="DurationInSeconds" Binding="{Binding DurationInSeconds}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Description" Binding="{Binding Description}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Discount" Binding="{Binding Discount}"></DataGridTextColumn>
-                <DataGridTemplateColumn Header="MainImagePath">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Image Source="{Binding MainImagePath}"></Image>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Vegetable}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Период созревания" Binding="{Binding RipeningPeriod}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Период плодоносия" Binding="{Binding FrutingPeriod}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Сбор растения" Binding="{Binding DiePeriod}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         
-        <DataGrid Grid.Row="1" x:Name="DGProduct" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" x:Name="DGGreenhousss" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Title" Binding="{Binding Title}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Cost" Binding="{Binding Cost}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Description" Binding="{Binding Description}"></DataGridTextColumn>
-                <DataGridTextColumn Header="IsActive" Binding="{Binding IsActive}"></DataGridTextColumn>
-                <DataGridTextColumn Header="ManufacturerID" Binding="{Binding Manufacture.ManufacturerID}"></DataGridTextColumn>
-                <DataGridTemplateColumn Header="MainImagePath">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Image Source="{Binding MainImagePath}"></Image>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Теплица" Binding="{Binding Greenhouse}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Размер (метры кубические)" Binding="{Binding Size}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип" Binding="{Binding TypeOfGH}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 
-        <DataGrid Grid.Row="1" x:Name="DGClients" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" x:Name="DGGHPlanting" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"></DataGridTextColumn>
-                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Birthday" Binding="{Binding Birthday}"></DataGridTextColumn>
-                <DataGridTextColumn Header="RegistrationDate" Binding="{Binding RegistrationDate}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"></DataGridTextColumn>
-                <DataGridTextColumn Header="GenderCode" Binding="{Binding Gender.Code}"></DataGridTextColumn>
-                <DataGridTemplateColumn Header="PhotoPath">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Image Source="{Binding PhotoPath}"></Image>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Номер теплицы" Binding="{Binding GreenhouseNum}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Растение" Binding="{Binding VegPlanting}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата начала посадки" Binding="{Binding PlantDate}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

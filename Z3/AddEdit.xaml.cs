@@ -27,11 +27,11 @@ namespace Z3
     public partial class AddEdit : Window
     {
         
-        public AddEdit(MordochkaEntities context, Client client)
+        public AddEdit(PP042022Entities context, Vegatables Vegatable)
         {
             InitializeComponent();
-            AddEditManager.AddEditFrame = AddEditFrame;
-            AddEditFrame.Navigate (new AddClient(context, client));
+            //AddEditManager.AddEditFrame = AddEditFrame;
+            //AddEditFrame.Navigate(new AddClient(Vegatable));
         }
 
         private void AddEditFrame_ContentRendered(object sender, EventArgs e)

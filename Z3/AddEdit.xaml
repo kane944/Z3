@@ -16,9 +16,9 @@
         <StackPanel Orientation="Horizontal">
             <Image Source="Resources/beauty_logo.png"
                    Margin="5" ></Image>
-            
-            
-            <ComboBox x:Name="ComBoxChooseAdd" SelectionChanged="ComBoxChooseAdd_SelectionChanged" Width="150" Height="40" Margin="30">
+
+
+            <ComboBox x:Name="ComBoxChooseAdd" SelectionChanged="ComBoxChooseAdd_SelectionChanged" Width="250" Height="40" Margin="30" SelectedIndex="0" FontSize="25">
                 <TextBlock>Добавить клиента</TextBlock>
                 <TextBlock>Добавить продукт</TextBlock>
                 <TextBlock>Добавить сервис</TextBlock>

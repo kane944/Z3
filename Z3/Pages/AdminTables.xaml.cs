@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Z3.Pages.AddAndEditPages;
 
 namespace Z3.Pages
 {
@@ -20,19 +21,19 @@ namespace Z3.Pages
     /// </summary>
     public partial class AdminTables : Page
     {
-        MordochkaEntities context;
+        PP042022Entities context;
         public AdminTables()
         {
             InitializeComponent();
-            context = new MordochkaEntities();
+            context = new PP042022Entities();
             ShowTable();
         }
 
         private void ShowTable()
         {
-            DGProduct.ItemsSource = context.Product.ToList();
-            DGClients.ItemsSource = context.Client.ToList();
-            DGService.ItemsSource = context.Service.ToList();
+            DGVegetable.ItemsSource = context.Vegatables.ToList();
+            DGGreenhousss.ItemsSource = context.Greenhouses.ToList();
+            DGGHPlanting.ItemsSource = context.GreenhousePlanting.ToList();
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -40,27 +41,27 @@ namespace Z3.Pages
             switch (ComBoxTables.SelectedIndex)
             {
                 case 0:
-                    if (DGClients != null)
+                    if (DGVegetable != null)
                     {
-                        DGClients.Visibility = Visibility.Visible;
-                        DGProduct.Visibility = Visibility.Hidden;
-                        DGService.Visibility = Visibility.Hidden;
+                        DGVegetable.Visibility = Visibility.Visible;
+                        DGGreenhousss.Visibility = Visibility.Hidden;
+                        DGGHPlanting.Visibility = Visibility.Hidden;
                     }
                     break;
                 case 1:
-                    if (DGProduct != null)
+                    if (DGGreenhousss != null)
                     {
-                        DGClients.Visibility = Visibility.Hidden;
-                        DGProduct.Visibility = Visibility.Visible;
-                        DGService.Visibility = Visibility.Hidden;
+                        DGVegetable.Visibility = Visibility.Hidden;
+                        DGGreenhousss.Visibility = Visibility.Visible;
+                        DGGHPlanting.Visibility = Visibility.Hidden;
                     }
                     break;
                 case 2:
-                    if (DGService != null)
+                    if (DGGHPlanting != null)
                     {
-                        DGClients.Visibility = Visibility.Hidden;
-                        DGProduct.Visibility = Visibility.Hidden;
-                        DGService.Visibility = Visibility.Visible;
+                        DGVegetable.Visibility = Visibility.Hidden;
+                        DGGreenhousss.Visibility = Visibility.Hidden;
+                        DGGHPlanting.Visibility = Visibility.Visible;
                     }
                     break;
                 default:
@@ -70,8 +71,11 @@ namespace Z3.Pages
 
         private void AddDataBtn_Click(object sender, RoutedEventArgs e)
         {
-            var Add = new AddEdit(context, new Client());
-            Add.Show(); 
+            //Manager.MainFrame.Navigate(new AddClient(new Client()));
+
+            var Add = new AddEdit(context, new Vegatables());
+            Add.Show();
+            ShowTable();
         }
     }
 }
