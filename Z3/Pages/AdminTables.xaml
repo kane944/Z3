@@ -1,0 +1,54 @@
+﻿<Page x:Class="Z3.Pages.AdminTables"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Z3.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminTables">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <ComboBox x:Name="ComBoxTables" Grid.Row="0" Width="350" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Растения</TextBlock>
+            <TextBlock>Теплицы</TextBlock>
+            <TextBlock>Засадка в теплицы</TextBlock>
+        </ComboBox>
+        
+        <Button x:Name="AddDataBtn" Click="AddDataBtn_Click" HorizontalAlignment="Right" Style="{StaticResource BtnMenu}">Добавить запись</Button>
+
+
+        <DataGrid Grid.Row="1" x:Name="DGVegetable" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Vegetable}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Период созревания" Binding="{Binding RipeningPeriod}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Период плодоносия" Binding="{Binding FrutingPeriod}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Сбор растения" Binding="{Binding DiePeriod}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <DataGrid Grid.Row="1" x:Name="DGGreenhousss" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Теплица" Binding="{Binding Greenhouse}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Размер (метры кубические)" Binding="{Binding Size}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип" Binding="{Binding TypeOfGH}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid Grid.Row="1" x:Name="DGGHPlanting" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер теплицы" Binding="{Binding GreenhouseNum}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Растение" Binding="{Binding VegPlanting}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата начала посадки" Binding="{Binding PlantDate}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Z3.AddEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Z3"
+        mc:Ignorable="d"
+        Title="AddEdit" Height="800" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        
+        <StackPanel Orientation="Horizontal">
+            <Image Source="Resources/beauty_logo.png"
+                   Margin="5" ></Image>
+
+
+            <ComboBox x:Name="ComBoxChooseAdd" SelectionChanged="ComBoxChooseAdd_SelectionChanged" Width="250" Height="40" Margin="30" SelectedIndex="0" FontSize="25">
+                <TextBlock>Добавить клиента</TextBlock>
+                <TextBlock>Добавить продукт</TextBlock>
+                <TextBlock>Добавить сервис</TextBlock>
+            </ComboBox>
+            
+        </StackPanel>
+        
+        <Frame x:Name="AddEditFrame" Grid.Row="1" NavigationUIVisibility="Hidden"
+               ContentRendered="AddEditFrame_ContentRendered"></Frame>
+    </Grid>
+</Window>

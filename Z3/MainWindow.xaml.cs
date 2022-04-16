@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Z3.Pages;
 
 namespace Z3
 {
@@ -23,6 +24,21 @@ namespace Z3
         public MainWindow()
         {
             InitializeComponent();
+            Manager.MainFrame = MainFrame;
+            MainFrame.Navigate(new PageMain());
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+                MainFrame.GoBack();
+        }
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if (!MainFrame.CanGoBack)
+                BtnBack.Visibility = Visibility.Collapsed;
+            else
+                BtnBack.Visibility = Visibility.Visible;
         }
     }
 }
